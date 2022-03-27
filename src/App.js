@@ -7,7 +7,7 @@ function App() {
   ])
 
   const handleFormChange = (event, index) => {
-    let data = [...formFields];
+    let data = JSON.parse(JSON.stringify(formFields));
     data[index][event.target.name] = event.target.value;
     setFormFields(data);
   }
